@@ -1,8 +1,8 @@
 package com.jpacourse.persistance.entity;
 
-import java.time.LocalDateTime;
-
 import jakarta.persistence.*;
+import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 @Table(name = "VISIT")
@@ -12,33 +12,28 @@ public class VisitEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	private String description;
-
 	@Column(nullable = false)
-	private LocalDateTime time;
+	private LocalDateTime visitDateTime;
 
-	public Long getId() {
-		return id;
-	}
+	@ManyToOne
+	@JoinColumn(name = "PATIENT_ID")
+	private PatientEntity patient;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+	@ManyToOne
+	@JoinColumn(name = "DOCTOR_ID")
+	private DoctorEntity doctor;
 
-	public String getDescription() {
-		return description;
-	}
+	@ManyToMany
+	@JoinTable(
+			name = "VISIT_TREATMENTS",
+			joinColumns = @JoinColumn(name = "VISIT_ID"),
+			inverseJoinColumns = @JoinColumn(name = "TREATMENT_ID")
+	)
+	private Set<MedicalTreatmentEntity> medicalTreatments;
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public LocalDateTime getTime() {
-		return time;
-	}
-
-	public void setTime(LocalDateTime time) {
-		this.time = time;
-	}
-
+	public Long getId() { return id; }
+	public LocalDateTime getVisitDateTime() { return visitDateTime; }
+	public PatientEntity getPatient() { return patient; }
+	public DoctorEntity getDoctor() { return doctor; }
+	public Set<MedicalTreatmentEntity> getMedicalTreatments() { return medicalTreatments; }
 }
