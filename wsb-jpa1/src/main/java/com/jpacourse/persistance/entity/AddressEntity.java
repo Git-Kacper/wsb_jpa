@@ -28,4 +28,19 @@ public class AddressEntity {
 	public String getAddressLine2() { return addressLine2; }
 	public String getPostalCode() { return postalCode; }
 	public Set<PatientEntity> getPatients() { return patients; }
+
+	public void setId(Long id) {
+	}
+
+	public void setAddressLine1(String addressLine1) {
+	}
+
+	public void setAddressLine2(String addressLine2) {
+	}
+
+	public void setCity(String city) {
+	}
+
+	public void setPostalCode(String postalCode) {
+	}
 }
