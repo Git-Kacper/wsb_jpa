@@ -33,6 +33,14 @@ public class DoctorEntity {
 	@OneToMany(mappedBy = "doctor")
 	private Set<VisitEntity> visits;
 
+	@ManyToMany
+	@JoinTable(
+			name = "DOCTOR_ADDRESSES",
+			joinColumns = @JoinColumn(name = "DOCTOR_ID"),
+			inverseJoinColumns = @JoinColumn(name = "ADDRESS_ID")
+	)
+	private Set<AddressEntity> addresses;
+
 	public Long getId() { return id; }
 	public String getFirstName() { return firstName; }
 	public String getLastName() { return lastName; }
