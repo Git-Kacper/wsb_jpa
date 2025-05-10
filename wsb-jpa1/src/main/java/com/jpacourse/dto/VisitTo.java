@@ -1,6 +1,7 @@
 package com.jpacourse.dto;
 
 import com.jpacourse.persistance.enums.TreatmentType;
+
 import java.time.LocalDateTime;
 import java.util.List;
 

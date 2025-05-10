@@ -5,7 +5,6 @@ import com.jpacourse.persistance.entity.AddressEntity;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class AddressDaoImpl extends AbstractDao<AddressEntity, Long> implements AddressDao
-{
+public class AddressDaoImpl extends AbstractDao<AddressEntity, Long> implements AddressDao {
 
 }

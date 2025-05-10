@@ -13,33 +13,33 @@ import lombok.Setter;
 @Table(name = "VISIT")
 public class VisitEntity {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	private String description;
+    private String description;
 
-	@Column(nullable = false)
-	private LocalDateTime time;
+    @Column(nullable = false)
+    private LocalDateTime time;
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(nullable = false, name = "DOCTOR_ID")
-	private DoctorEntity doctor;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(nullable = false, name = "DOCTOR_ID")
+    private DoctorEntity doctor;
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(nullable = false, name = "PATIENT_ID")
-	private PatientEntity patient;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(nullable = false, name = "PATIENT_ID")
+    private PatientEntity patient;
 
-	@OneToMany(mappedBy = "visit", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private List<MedicalTreatmentEntity> medicalTreatments;
+    @OneToMany(mappedBy = "visit", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<MedicalTreatmentEntity> medicalTreatments;
 
-	public void addMedicalTreatment(MedicalTreatmentEntity medicalTreatment) {
-		this.medicalTreatments.add(medicalTreatment);
-		medicalTreatment.setVisit(this);
-	}
+    public void addMedicalTreatment(MedicalTreatmentEntity medicalTreatment) {
+        this.medicalTreatments.add(medicalTreatment);
+        medicalTreatment.setVisit(this);
+    }
 
-	public void removeMedicalTreatment(MedicalTreatmentEntity visit) {
-		this.medicalTreatments.remove(visit);
-		visit.setVisit(null);
-	}
+    public void removeMedicalTreatment(MedicalTreatmentEntity visit) {
+        this.medicalTreatments.remove(visit);
+        visit.setVisit(null);
+    }
 }

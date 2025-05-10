@@ -1,9 +1,6 @@
 package com.jpacourse.persistance.dao;
 
 import com.jpacourse.persistance.entity.AddressEntity;
-import com.jpacourse.rest.exception.EntityNotFoundException;
-import org.hibernate.annotations.processing.SQL;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,7 +19,6 @@ public class AddressDaoTest {
     @Autowired
     private AddressDao addressDao;
 
-    @Transactional
     @Test
     @Sql("/data/address.sql")
     public void testShouldFindAddressById() {
@@ -34,7 +30,6 @@ public class AddressDaoTest {
         assertThat(addressEntity.getCity()).isEqualTo("Warszawa");
     }
 
-    @Transactional
     @Test
     @Sql("/data/address.sql")
     public void testShouldRemoveAddressById() {
@@ -47,7 +42,6 @@ public class AddressDaoTest {
         assertThat(addressDao.findOne(warsaw_id)).isNull();
     }
 
-    @Transactional
     @Test
     @Sql("/data/address.sql")
     public void testShouldNotRemoveAddressIfIdNotExist() {
@@ -102,6 +96,4 @@ public class AddressDaoTest {
         final AddressEntity removed = addressDao.findOne(saved.getId());
         assertThat(removed).isNull();
     }
-
-
 }

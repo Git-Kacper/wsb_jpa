@@ -9,7 +9,7 @@ public class AddressHelpers {
         address.setAddressLine1("address line 1");
         address.setAddressLine2("address line 2");
         address.setCity("city");
-        address.setPostalCode("postal code");
+        address.setPostalCode("699");
 
         return address;
     }

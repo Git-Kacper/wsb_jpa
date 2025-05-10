@@ -1,6 +1,5 @@
 package com.jpacourse.persistance.helpers;
 
-import com.jpacourse.persistance.entity.AddressEntity;
 import com.jpacourse.persistance.entity.PatientEntity;
 
 import java.time.LocalDate;
@@ -13,14 +12,13 @@ public class PatientHelpers {
     public static PatientEntity createPatient() {
         PatientEntity patientEntity = new PatientEntity();
 
-        AddressEntity addressEntity = createAddress();
         patientEntity.setFirstName("FOo");
         patientEntity.setLastName("Bar");
         patientEntity.setTelephoneNumber("0721");
         patientEntity.setEmail("bar@example.com");
         patientEntity.setPatientNumber("69");
         patientEntity.setDateOfBirth(LocalDate.from(LocalDateTime.now()));
-        patientEntity.setAddress(addressEntity);
+        patientEntity.setAddress(createAddress());
 
         return patientEntity;
     }

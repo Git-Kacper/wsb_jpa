@@ -12,21 +12,15 @@ import lombok.Setter;
 @Table(name = "ADDRESS")
 public class AddressEntity {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
+    private String city;
 
-	private String city;
+    private String addressLine1;
 
+    private String addressLine2;
 
-	private String addressLine1;
-
-
-	private String addressLine2;
-
-
-	private String postalCode;
-
-
+    private String postalCode;
 }

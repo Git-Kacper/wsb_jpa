@@ -1,7 +1,7 @@
 package com.jpacourse.rest;
 
 import com.jpacourse.dto.PatientTo;
-import com.jpacourse.rest.exception.EntityNotFoundException;
+import com.jpacourse.rest.exception.PatientNotFoundException;
 import com.jpacourse.service.PatientService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,7 +18,7 @@ public class PatientController {
     @GetMapping("/patients/{id}")
     PatientTo findById(@PathVariable Long id) {
         try {
-            return patientService.findById(id).orElseThrow(() -> new EntityNotFoundException(id));
+            return patientService.findById(id).orElseThrow(() -> new PatientNotFoundException(id));
         } catch (Exception e) {
             System.err.println("Error occurred: " + e.getMessage());
             throw e;

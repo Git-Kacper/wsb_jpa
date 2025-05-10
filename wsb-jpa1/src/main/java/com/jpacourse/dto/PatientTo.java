@@ -10,8 +10,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public class PatientTo implements Serializable
-{
+public class PatientTo implements Serializable {
     private Long id;
     private String firstName;
     private String lastName;

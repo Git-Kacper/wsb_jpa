@@ -12,17 +12,17 @@ import lombok.Setter;
 @Table(name = "MEDICAL_TREATMENT")
 public class MedicalTreatmentEntity {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	@Column(nullable = false)
-	private String description;
+    @Column(nullable = false)
+    private String description;
 
-	@Enumerated(EnumType.STRING)
-	private TreatmentType type;
+    @Enumerated(EnumType.STRING)
+    private TreatmentType type;
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "VISIT_ID")
-	private VisitEntity visit;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "VISIT_ID")
+    private VisitEntity visit;
 }
