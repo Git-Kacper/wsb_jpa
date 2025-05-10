@@ -20,4 +20,6 @@ public class PatientTo implements Serializable {
     private LocalDate dateOfBirth;
     private AddressEntity address;
     private List<VisitTo> visits;
+    private Boolean insured;
+    private LocalDate insuranceStartDate;
 }

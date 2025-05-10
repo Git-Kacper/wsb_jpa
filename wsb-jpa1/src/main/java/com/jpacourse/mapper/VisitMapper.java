@@ -11,6 +11,7 @@ public class VisitMapper {
         if (visitEntity == null) {
             return null;
         }
+
         final VisitTo visitTo = new VisitTo();
         visitTo.setVisitDate(visitEntity.getTime());
         visitTo.setDoctorFirstName(visitEntity.getDoctor().getFirstName());

@@ -45,6 +45,11 @@ public class PatientEntity {
     @Fetch(FetchMode.JOIN)
     private List<VisitEntity> visits = new ArrayList<>();
 
+    private Boolean insured;
+
+    @Column(nullable = true)
+    private LocalDate insuranceStartDate;
+
     public void addVisit(VisitEntity visit) {
         this.visits.add(visit);
         visit.setPatient(this);

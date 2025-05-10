@@ -1,11 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;C:/programowanie&quot;
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="19478eb2-5087-4f65-9201-8926d44805b8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/jpacourse/dto/AddressTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/jpacourse/dto/AddressTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/jpacourse/dto/PatientTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/jpacourse/dto/PatientTo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/jpacourse/mapper/PatientMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/jpacourse/mapper/PatientMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/jpacourse/mapper/VisitMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/jpacourse/mapper/VisitMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/jpacourse/persistance/dao/PatientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/jpacourse/persistance/dao/PatientDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/jpacourse/persistance/dao/impl/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/jpacourse/persistance/dao/impl/AbstractDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/jpacourse/persistance/dao/impl/PatientDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/jpacourse/persistance/dao/impl/PatientDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/jpacourse/persistance/entity/AddressEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/jpacourse/persistance/entity/AddressEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/jpacourse/persistance/entity/PatientEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/jpacourse/persistance/entity/PatientEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/test/java/com/jpacourse/persistance/dao/AddressDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/test/java/com/jpacourse/persistance/dao/AddressDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/test/java/com/jpacourse/persistance/dao/PatientDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/test/java/com/jpacourse/persistance/dao/PatientDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/test/java/com/jpacourse/persistance/helpers/AddressHelpers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/test/java/com/jpacourse/persistance/helpers/PatientHelpers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/test/java/com/jpacourse/persistance/service/AddressServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/test/java/com/jpacourse/persistance/service/PatientServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/test/resources/application_test.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/test/resources/data/address.sql" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/test/resources/data/address.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/test/resources/data/patients.sql" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Git-Kacper"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Git-Kacper/wsb_jpa.git",
+    "accountId": "26bb0c26-517f-4cce-83a1-925df7fe4f73"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2wuVk1jNgkBUhzhTWiLhoEgN2GD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.AddressDaoTest.executor": "Run",
+    "JUnit.PatientDaoTest.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.WsbJpaApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/programowanie",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "h2"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.WsbJpaApplication">
+    <configuration name="medical-treatments.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/wsb-jpa1/src/test/resources/data/medical-treatments.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
+    <configuration name="AddressDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wsb-jpa1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jpacourse.persistance.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jpacourse.persistance.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.jpacourse.persistance.dao.AddressDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wsb-jpa1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jpacourse.persistance.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jpacourse.persistance.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.jpacourse.persistance.dao.PatientDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WsbJpaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="wsb-jpa1" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.jpacourse.WsbJpaApplication" />
@@ -13,5 +125,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PatientDaoTest" />
+        <item itemvalue="JUnit.AddressDaoTest" />
+        <item itemvalue="Database Script.medical-treatments.sql" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.39" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.39" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="19478eb2-5087-4f65-9201-8926d44805b8" name="Changes" comment="" />
+      <created>1746891586264</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746891586264</updated>
+      <workItem from="1746891587692" duration="2391000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

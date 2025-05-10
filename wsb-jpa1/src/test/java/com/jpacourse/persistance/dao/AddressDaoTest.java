@@ -9,43 +9,73 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.transaction.annotation.Transactional;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import java.util.List;
+
+import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @SpringBootTest
-@Transactional
 @ActiveProfiles("test")
 public class AddressDaoTest {
+
     @Autowired
     private AddressDao addressDao;
 
+    @Transactional
     @Test
-    @Sql("/data/address.sql")
+    public void shouldSaveAddress() {
+        // GIVEN
+        AddressEntity address = createAddress();
+        long entitiesCountBefore = addressDao.count();
+
+        // WHEN
+        AddressEntity saved = addressDao.save(address);
+
+        // THEN
+        assertThat(saved).isNotNull();
+        assertThat(saved.getId()).isNotNull();
+        assertThat(addressDao.count()).isEqualTo(entitiesCountBefore + 1);
+    }
+
+    @Transactional
+    @Test
+    @Sql("/data/Address.sql")
+    public void shouldFindAddressById() {
+        long addressId = 901L;
+
+        AddressEntity found = addressDao.findOne(addressId);
+
+        assertThat(found).isNotNull();
+        assertThat(found.getPostalCode()).isEqualTo("00-001");
+    }
+
+    @Transactional
+    @Test
+    @Sql("/data/Address.sql")
+    public void shouldFindAllAddress() {
+        int entitiesCount = 7;
+
+        List<AddressEntity> Address = addressDao.findAll();
+
+        assertThat(Address).isNotNull();
+        assertThat(Address).hasSize(entitiesCount);
+    }
+
+    @Transactional
+    @Test
+    @Sql("/data/Address.sql")
     public void testShouldFindAddressById() {
-        Long warsaw_id = 69L;
+        Long warsaw_id = 901L;
 
         AddressEntity addressEntity = addressDao.findOne(warsaw_id);
 
         assertThat(addressEntity).isNotNull();
-        assertThat(addressEntity.getCity()).isEqualTo("Warszawa");
+        assertThat(addressEntity.getCity()).isEqualTo("Nowa Warszawa");
     }
 
     @Test
-    @Sql("/data/address.sql")
-    public void testShouldRemoveAddressById() {
-        Long warsaw_id = 69L;
-        long entries = addressDao.count();
-
-        addressDao.delete(warsaw_id);
-
-        assertThat(addressDao.count()).isEqualTo(entries - 1);
-        assertThat(addressDao.findOne(warsaw_id)).isNull();
-    }
-
-    @Test
-    @Sql("/data/address.sql")
+    @Sql("/data/Address.sql")
     public void testShouldNotRemoveAddressIfIdNotExist() {
-
         Long notExistId = 999L;
 
         assertThrows(JpaObjectRetrievalFailureException.class, () -> {
@@ -55,45 +85,24 @@ public class AddressDaoTest {
 
     @Transactional
     @Test
-    public void testShouldSaveAddress() {
-        // given
-        AddressEntity addressEntity = new AddressEntity();
-        addressEntity.setAddressLine1("line1");
-        addressEntity.setAddressLine2("line2");
-        addressEntity.setCity("City1");
-        addressEntity.setPostalCode("27-677");
-        long entitiesNumBefore = addressDao.count();
+    @Sql("/data/Address.sql")
+    public void shouldRemoveAddressById() {
+        long addressId = 902L;
+        long entitiesCountBefore = addressDao.count();
 
-        // when
-        final AddressEntity saved = addressDao.save(addressEntity);
+        addressDao.delete(addressId);
 
-        // then
-        assertThat(saved).isNotNull();
-        assertThat(saved.getId()).isNotNull();
-        assertThat(saved.getPostalCode()).isEqualTo("27-677");
-        assertThat(addressDao.count()).isEqualTo(entitiesNumBefore + 1);
+        assertThat(addressDao.count()).isEqualTo(entitiesCountBefore - 1);
+        assertThat(addressDao.findOne(addressId)).isNull();
     }
 
-    @Transactional
-    @Test
-    public void testShouldSaveAndRemoveAddress() {
-        // given
+    private AddressEntity createAddress() {
         AddressEntity addressEntity = new AddressEntity();
-        addressEntity.setAddressLine1("line1");
-        addressEntity.setAddressLine2("line2");
-        addressEntity.setCity("City1");
-        addressEntity.setPostalCode("66-666");
+        addressEntity.setAddressLine1("250 Hospital Drive");
+        addressEntity.setAddressLine2("Building A");
+        addressEntity.setCity("Wroclaw");
+        addressEntity.setPostalCode("10001");
 
-        // when
-        final AddressEntity saved = addressDao.save(addressEntity);
-        assertThat(saved.getId()).isNotNull();
-        final AddressEntity newSaved = addressDao.findOne(saved.getId());
-        assertThat(newSaved).isNotNull();
-
-        addressDao.delete(saved.getId());
-
-        // then
-        final AddressEntity removed = addressDao.findOne(saved.getId());
-        assertThat(removed).isNull();
+        return addressEntity;
     }
 }

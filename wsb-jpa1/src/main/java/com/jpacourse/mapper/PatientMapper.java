@@ -9,6 +9,7 @@ public class PatientMapper {
         if (patientEntity == null) {
             return null;
         }
+
         final PatientTo patientTo = new PatientTo();
         patientTo.setId(patientEntity.getId());
         patientTo.setFirstName(patientEntity.getFirstName());
@@ -19,6 +20,7 @@ public class PatientMapper {
         patientTo.setDateOfBirth(patientEntity.getDateOfBirth());
         patientTo.setAddress(patientEntity.getAddress());
         patientTo.setVisits(patientEntity.getVisits().stream().map(VisitMapper::mapToTo).toList());
+        patientTo.setInsured(patientEntity.getInsured());
 
         return patientTo;
     }
