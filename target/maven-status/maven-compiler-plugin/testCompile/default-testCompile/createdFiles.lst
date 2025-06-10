@@ -1,0 +1,5 @@
+com\jpacourse\persistance\dao\PatientOptimisticLockTest.class
+com\jpacourse\persistance\dao\PatientDaoTest.class
+com\jpacourse\service\PatientServiceTest.class
+com\jpacourse\service\PatientServiceJpqlTest.class
+com\jpacourse\persistance\dao\AddressDaoTest.class

@@ -3,6 +3,8 @@ package com.jpacourse.persistance.entity;
 import com.jpacourse.persistance.enums.TreatmentType;
 
 import jakarta.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "MEDICAL_TREATMENT")
@@ -17,6 +19,10 @@ public class MedicalTreatmentEntity {
 
 	@Enumerated(EnumType.STRING)
 	private TreatmentType type;
+
+	// Relacja dwustronna od strony odwrotnej do wizyt (Many-to-Many)
+	@ManyToMany(mappedBy = "medicalTreatments", fetch = FetchType.LAZY)
+	private List<VisitEntity> visits = new ArrayList<>();
 
 	public Long getId() {
 		return id;
@@ -40,6 +46,14 @@ public class MedicalTreatmentEntity {
 
 	public void setType(TreatmentType type) {
 		this.type = type;
+	}
+
+	public List<VisitEntity> getVisits() {
+		return visits;
+	}
+
+	public void setVisits(List<VisitEntity> visits) {
+		this.visits = visits;
 	}
 
 }

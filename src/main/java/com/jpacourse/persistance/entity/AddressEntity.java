@@ -8,7 +8,8 @@ import jakarta.persistence.*;
 public class AddressEntity {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "address_seq")
+	@SequenceGenerator(name = "address_seq", sequenceName = "address_sequence", allocationSize = 1, initialValue = 100)
 	private Long id;
 
 	private String city;
