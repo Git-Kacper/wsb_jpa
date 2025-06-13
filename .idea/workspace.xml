@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4e06406-d4fd-4e5a-b04e-978ce7fa89c5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpacourse/persistance/entity/AddressEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpacourse/persistance/entity/AddressEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpacourse/persistance/entity/DoctorEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpacourse/persistance/entity/DoctorEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpacourse/persistance/entity/MedicalTreatmentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpacourse/persistance/entity/MedicalTreatmentEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpacourse/persistance/entity/PatientEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpacourse/persistance/entity/PatientEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpacourse/persistance/entity/VisitEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpacourse/persistance/entity/VisitEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jpacourse/persistance/dao/AddressDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jpacourse/persistance/dao/AddressDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jpacourse/persistance/entity/AddressEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jpacourse/persistance/entity/AddressEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jpacourse/persistance/entity/DoctorEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jpacourse/persistance/entity/DoctorEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jpacourse/persistance/entity/MedicalTreatmentEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jpacourse/persistance/entity/MedicalTreatmentEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jpacourse/persistance/entity/PatientEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jpacourse/persistance/entity/PatientEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jpacourse/persistance/entity/VisitEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jpacourse/persistance/entity/VisitEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +47,37 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.PatientDaoTest">
+    <configuration name="PatientDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wsb-jpa1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jpacourse.persistance.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jpacourse.persistance.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.jpacourse.persistance.dao.PatientDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientOptimisticLockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wsb-jpa1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jpacourse.persistance.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jpacourse.persistance.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.jpacourse.persistance.dao.PatientOptimisticLockTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WsbJpaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="wsb-jpa1" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.jpacourse.WsbJpaApplication" />
@@ -67,6 +85,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PatientDaoTest" />
+        <item itemvalue="JUnit.PatientOptimisticLockTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -84,7 +108,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1749587120017</updated>
-      <workItem from="1749587121165" duration="922000" />
+      <workItem from="1749587121165" duration="1377000" />
     </task>
     <servers />
   </component>

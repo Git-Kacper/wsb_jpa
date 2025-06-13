@@ -57,13 +57,13 @@ VALUES
     (8, 2); -- Wizyta 8: EKG spoczynkowe
 
 -- Znajdz pacjentow po nazwisku
-SELECT last_name FROM patient
+--SELECT last_name FROM patient
 
 -- Znajdz wszystkie wizyty pacjenta po jego ID
-SELECT V.*, P.FIRST_NAME, P.LAST_NAME FROM VISIT V JOIN PATIENT P ON V.PATIENT_ID = P.ID WHERE P.ID = 1
+--SELECT V.*, P.FIRST_NAME, P.LAST_NAME FROM VISIT V JOIN PATIENT P ON V.PATIENT_ID = P.ID WHERE P.ID = 1
 
 -- Znajdz pacjentow ktorzy mieli wiecej niz X wizyt (X jest parametrem wejsciowym)
-SELECT P.ID, P.FIRST_NAME, P.LAST_NAME, COUNT(V.ID) AS VISIT_COUNT FROM PATIENT P JOIN VISIT V ON P.ID = V.PATIENT_ID GROUP BY P.ID, P.FIRST_NAME, P.LAST_NAME HAVING COUNT(V.ID) > 3
+--SELECT P.ID, P.FIRST_NAME, P.LAST_NAME, COUNT(V.ID) AS VISIT_COUNT FROM PATIENT P JOIN VISIT V ON P.ID = V.PATIENT_ID GROUP BY P.ID, P.FIRST_NAME, P.LAST_NAME HAVING COUNT(V.ID) > 3
 
 -- Znajdz pacjentow po dodanym przez Ciebie polu - nie wyszukuj wprost po wartosci, uzyj zapytania typu wieksze/mniejsze/pozniej/wczesniej/zawiera, w zaleznosci od wybranego typu zmiennej.
-SELECT * FROM PATIENT WHERE DATE_OF_BIRTH < '1990-01-01'
+--SELECT * FROM PATIENT WHERE DATE_OF_BIRTH < '1990-01-01'
